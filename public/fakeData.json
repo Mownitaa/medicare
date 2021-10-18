@@ -2,31 +2,37 @@
     {
         "id": 1,
         "name": "24/7 Ambulance",
-        "img": ""
+        "img": "https://images.unsplash.com/photo-1627886206188-ef46c8939e00?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8aG9zcGl0YWwlMjBhbWJ1bGFuY2V8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+        "description": "We have enough ambulance and expert drivers to serve you whenever you need."
     },
     {
         "id": 2,
         "name": "Experts Consultancy",
-        "img": ""
+        "img": "https://media.istockphoto.com/photos/pharmacist-wearing-protective-hygienic-mask-and-making-drug-in-picture-id1271046154?b=1&k=20&m=1271046154&s=170667a&w=0&h=U5sbMz9_ujddRxw-lI4zXOB5RYMqaxLxO5Ix8izRMJA=",
+        "description": "Our experienced specialists are always bound to listen your problems and guide you."
     },
     {
         "id": 3,
         "name": "Free Checkup",
-        "img": ""
+        "img": "https://media.istockphoto.com/photos/attentive-young-doctor-talks-with-female-patient-picture-id998833412?b=1&k=20&m=998833412&s=170667a&w=0&h=-H7sh9wiNz1laEaEdbL-8w5q-rngUseuVW8whErCsY0=",
+        "description": "Free checkups are also available.Because we think of everyone's safe and healthy life."
     },
     {
         "id": 4,
         "name": "Medicines",
-        "img": ""
+        "img": "https://media.istockphoto.com/photos/masked-pharmacist-picture-id1280979682?b=1&k=20&m=1280979682&s=170667a&w=0&h=ayNjc_3bl5FKPObgs7Kj7vtLHUI02ShVqwFtYgEo3ck=",
+        "description": "In ground floor we have 2 counters from where you can collect prescribed medicines."
     },
     {
         "id": 5,
         "name": "Bed Facility",
-        "img": ""
+        "img": "https://media.istockphoto.com/photos/doctors-and-nurses-taking-care-of-patients-in-icu-picture-id1254958416?b=1&k=20&m=1254958416&s=170667a&w=0&h=h0EeHg18gYo5Qd0jiClnJJOU9WW4XqFVYGOOyZksdXs=",
+        "description": "Our hospital has more than three thousand bed with all facilities"
     },
     {
         "id": 6,
-        "name": "Hygiene Accuracy",
-        "img": ""
+        "name": "Hygiene Precision",
+        "img": "https://images.unsplash.com/photo-1514416432279-50fac261c7dd?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aHlnaWVuZSUyMHByZWNpc2lvbnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+        "description": "Our hard workers take care of your hygiene related issues and keep everything cleaner."
     }
 ]
