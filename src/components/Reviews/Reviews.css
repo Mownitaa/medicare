@@ -1,0 +1,16 @@
+.box::before{
+    content:'';
+    position:absolute;
+    top: -4rem;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: rgb(33, 199, 199);
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    height:25rem;
+    width: 120%;
+    z-index:-1;
+}
+.box i{
+    color:rgb(28, 172, 172);
+}

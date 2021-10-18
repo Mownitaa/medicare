@@ -6,7 +6,7 @@ const Banner = () => {
     return (
         <div>
             <img className="banner-img img-fluid" src={bannerImg} alt="" />
-            <div class="banner-text">
+            <div className="banner-text">
                 <div className="texts">
                     <h1>Welcome To MediCare</h1>
                     <p>Your health and well-being is our top priority.Because your health is an investment,not an expense</p>
