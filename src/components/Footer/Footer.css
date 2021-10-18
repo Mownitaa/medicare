@@ -1,0 +1,11 @@
+.footer{
+    background-color: rgb(231, 243, 250);
+}
+
+.footer p:hover{
+    color: rgb(20, 207, 240);
+    font-weight: bold;
+    /* transition-duration:1s; */
+    transform:scale(1.2);
+    cursor: pointer;
+}
