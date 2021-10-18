@@ -1,22 +1,39 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-
+import './Header.css'
 const Header = () => {
     return (
         <div>
-            <div className="d-flex text-white  align-items-center justify-content-between py-3 px-5">
-                <div>
-                    <h4 className="text-warning"> <span className="fs-5 text-info">MediCare</span></h4>
+            <nav className="navbar navigation-bar navbar-expand-lg navbar-light px-5">
+                <div className="container-fluid">
+                    <h3 className="text-info fw-bold ps-3"><i className="fas fa-user-md"></i> MediCare</h3>
+                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span className="navbar-toggler-icon"></span>
+                    </button>
+                    <div className="collapse navbar-collapse px-5" id="navbarNav">
+                        <ul className="navbar-nav ms-5 ps-5">
+                            <li className="nav-item">
+                                <NavLink className="nav-link text-primary fs-5 pe-4" aria-current="page" to="/home">Home</NavLink>
+                            </li>
+                            <li className="nav-item">
+                                <NavLink className="nav-link text-primary fs-5 pe-4" to="/services">Services</NavLink>
+                            </li>
+
+                            <li className="nav-item">
+                                <NavLink className="nav-link text-primary fs-5 pe-4" to="/doctors">Doctors</NavLink>
+                            </li>
+                            <li className="nav-item">
+                                <NavLink className="nav-link text-primary fs-5 pe-4" to="/book">Book Now</NavLink>
+                            </li>
+                        </ul>
+                    </div>
+                    {/* <div>
+                        <p className="pe-5">login</p>
+                    </div> */}
                 </div>
-                <nav>
-                    <NavLink className="text-decoration-none text-dark fs-5 px-3" to="/home">Home</NavLink>
-                    <NavLink className="text-decoration-none text-dark fs-5 px-3" to="/about">About</NavLink>
-                    <NavLink className="text-decoration-none text-dark fs-5 px-3" to="/services">Services</NavLink>
-                    <NavLink className="text-decoration-none text-dark fs-5 px-3" to="/Teachers">Teachers</NavLink>
-                    <i className="fas fa-sign-in-alt text-info px-4 fs-4"></i>
-                </nav>
-            </div>
-        </div>
+
+            </nav>
+        </div >
     );
 };
 

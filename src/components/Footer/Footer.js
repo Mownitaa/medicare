@@ -3,50 +3,49 @@ import './Footer.css';
 const Footer = () => {
     return (
         <div className="mt-3 footer">
-            <div className="d-flex my-2 py-3 justify-content-center">
-                <div className="mx-5">
-                    <h5 className="pb-2 text-info fw-bold">Quick Links</h5>
-                    <p>Home</p>
-                    <p>Services</p>
-                    <p>Book</p>
-                    <p>Doctors</p>
-                    <p>Reviews</p>
-                    <p>Blogs</p>
+            <div className="d-flex my-2 py-3 justify-content-center row row-cols-sm-2 row-cols-md-6  ps-5 ms-5">
+                <div className="p-3">
+                    {/* quick links section */}
+                    <p className="pb-2 text-info fw-bold">Quick Links</p>
+                    <p><i class="far fa-hand-point-right text-primary"></i> Home</p>
+                    <p><i class="far fa-hand-point-right text-primary"></i> Services</p>
+                    <p><i class="far fa-hand-point-right text-primary"></i> Book</p>
+                    <p><i class="far fa-hand-point-right text-primary"></i> Doctors</p>
+                    <p><i class="far fa-hand-point-right text-primary"></i> Reviews</p>
+                    {/* our services section */}
                 </div>
-                <div className="mx-5">
-                    <h5 className="pb-2">Our Services</h5>
-                    <p>24/7 Support</p>
-                    <p>Free Checkup</p>
-                    <p>Diagnosis</p>
-                    <p>Ambulance Service</p>
-                    <p>Bed Facility</p>
-                    <p>Spare parts</p>
+                <div className="p-3">
+                    <p className="pb-2  text-primary fw-bold">Our Services</p>
+                    <p><i class="fas fa-chevron-right text-info"></i> 24/7 Support</p>
+                    <p><i class="fas fa-chevron-right text-info"></i> Free Checkup</p>
+                    <p><i class="fas fa-chevron-right text-info"></i> Ambulance Service</p>
+                    <p><i class="fas fa-chevron-right text-info"></i> Bed Facility</p>
+                    <p><i class="fas fa-chevron-right text-info"></i> Spare parts</p>
                 </div>
-                <div className="mx-5">
-                    <h5 className="pb-2 text-info fw-bold">Contact Info</h5>
-                    <p>+123-1234-6780</p>
-                    <p>+333-7889-578</p>
-                    <p>medicare@gmail.com</p>
-                    <p>medicare_789</p>
-                    <p>Savar,Dhaka,Bangladesh</p>
+
+                {/* contact info section */}
+                <div className="p-3">
+                    <p className="pb-2 text-info fw-bold">Contact Info</p>
+                    <p><i class="fas fa-phone text-primary"></i> +123-1234-6780</p>
+                    <p><i class="fab fa-whatsapp-square text-primary"></i> +333-7889-578</p>
+                    <p><i class="fas fa-at text-primary"></i> medicare@gmail.com</p>
+                    <p><i class="fab fa-instagram-square text-primary"></i> medicare_789</p>
+                    <p><i class="fas fa-map-marker-alt text-primary"></i> Dhaka,Bangladesh</p>
                 </div>
-                <div className="mx-5">
-                    <h5 className="pb-2">Follow Us</h5>
-                    <p>Facebook</p>
-                    <p>Twitter</p>
-                    <p>Instagram</p>
-                    <p>Linkedin</p>
-                    <p>Pinterest</p>
-                </div>
-                <div className="mx-5">
-                    <h6 className="text-info fw-bold">Stay Updated With Us</h6>
-                    <input className="my-3 pe-5 ps-1 py-1 border border-none border border-info" type=" email" placeholder="Enter your e-mail" />
-                    <br />
-                    <button className="bg-info py-2  px-3 border border-none rounded text-dark fw-bolder text-white">Sign Up</button>
+
+                {/* follow us section */}
+                <div className="p-3 mx-5">
+                    <p className="pb-2  text-primary fw-bold">Follow Us</p>
+                    <p><i class="fab fa-facebook-square text-info"></i> Facebook</p>
+                    <p><i class="fab fa-twitter-square text-info"></i> Twitter</p>
+                    <p><i class="fab fa-instagram-square text-info"></i> Instagram</p>
+                    <p><i class="fab fa-linkedin text-info"></i> Linkedin</p>
+                    <p><i class="fab fa-pinterest-square text-info"></i> Pinterest</p>
                 </div>
             </div>
+            {/* copyright */}
             <div className="border text-center py-1">
-                <i className="far fa-copyright"></i> All <span className="text-info fw-bolder">Rights</span> Reserved
+                <i className="far fa-copyright"></i> All <span className="text-primary fw-bolder">Rights</span> Reserved
             </div>
         </div>
     );
