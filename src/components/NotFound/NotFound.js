@@ -12,7 +12,7 @@ const NotFound = () => {
 
                 <div className="ms-5">
                     {/* homepage button */}
-                    <button className="m-3"> <NavLink className="text-decoration-none text-dark border border-none border-info rounded fw-bolder p-3" to="/home">HOMEPAGE</NavLink> </button>
+                    <button className="m-3"> <NavLink className="text-decoration-none text-dark p-4 fw-bolder" to="/home">HOME</NavLink> </button>
                     <h3 className="mt-2">
                         <small>
                             <i className="fab fa-twitter-square me-3 text-primary"></i>

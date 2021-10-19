@@ -8,7 +8,12 @@ import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import NotFound from './components/NotFound/NotFound';
 import Reviews from './components/Reviews/Reviews';
+import ServiceDetails from './components/ServiceDetails/ServiceDetails';
 import Services from './components/Services/Services';
+import initializeAuthentication from './Firebase/firebase.initialize';
+
+
+initializeAuthentication();
 
 function App() {
   return (
@@ -24,6 +29,9 @@ function App() {
           </Route>
           <Route exact path="/services">
             <Services></Services>
+          </Route>
+          <Route exact path="/service/:serviceId">
+            <ServiceDetails></ServiceDetails>
           </Route>
           <Route exact path="/facilities">
             <Facilities></Facilities>
