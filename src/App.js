@@ -1,4 +1,4 @@
-
+// import { getAuth, signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './App.css';
 import Appointment from './components/Appointment/Appointment';
@@ -6,6 +6,7 @@ import Facilities from './components/Facilities/Facilities';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
+import Login from './components/Login/Login';
 import NotFound from './components/NotFound/NotFound';
 import Reviews from './components/Reviews/Reviews';
 import ServiceDetails from './components/ServiceDetails/ServiceDetails';
@@ -14,6 +15,8 @@ import initializeAuthentication from './Firebase/firebase.initialize';
 
 
 initializeAuthentication();
+
+// const googleProvider = new GoogleAuthProvider();
 
 function App() {
   return (
@@ -41,6 +44,9 @@ function App() {
           </Route>
           <Route exact path="/reviews">
             <Reviews></Reviews>
+          </Route>
+          <Route exact path="/login">
+            <Login></Login>
           </Route>
           <Route path="*">
             <NotFound></NotFound>
