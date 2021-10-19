@@ -1,4 +1,4 @@
-// import { getAuth, signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
+
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './App.css';
 import Appointment from './components/Appointment/Appointment';
@@ -12,12 +12,7 @@ import Register from './components/Register/Register';
 import Reviews from './components/Reviews/Reviews';
 import ServiceDetails from './components/ServiceDetails/ServiceDetails';
 import Services from './components/Services/Services';
-import initializeAuthentication from './Firebase/firebase.initialize';
 
-
-initializeAuthentication();
-
-// const googleProvider = new GoogleAuthProvider();
 
 function App() {
   return (
