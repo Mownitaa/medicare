@@ -10,7 +10,7 @@ const NotFound = () => {
                 {/* notfound image */}
                 <img src={notFoundImg} alt="" />
 
-                <div className="ms-5">
+                <div className="ms-5  ps-4">
                     {/* homepage button */}
                     <button className="m-3"> <NavLink className="text-decoration-none text-dark p-4 fw-bolder" to="/home">HOME</NavLink> </button>
                     <h3 className="mt-2">
