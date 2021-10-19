@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useLocation, useHistory } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, sendEmailVerification } from 'firebase/auth';
 
 const Login = () => {
     const auth = getAuth();
@@ -71,12 +71,19 @@ const Login = () => {
                 const user = result.user;
                 console.log(user);
                 setError('');
+                verifyEmail();
             })
             .catch(error => {
                 setError(error.message);
             })
     }
 
+    const verifyEmail = () => {
+        sendEmailVerification(auth.currentUser)
+            .then(result => {
+                console.log(result);
+            })
+    }
 
     return (
         <div>
