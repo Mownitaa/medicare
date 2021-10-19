@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useLocation, useHistory } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 
@@ -9,11 +9,14 @@ const Login = () => {
     const history = useHistory();
 
     const redirect_uri = location.state?.from || '/services';
+    const [isLoading, setIsLoading] = useState(true);
+
     const handleGoogleLogin = () => {
         signInUsingGoogle()
             .then(result => {
                 history.push(redirect_uri);
             })
+            .finally(() => setIsLoading(false));
     }
 
     return (

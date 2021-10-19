@@ -28,7 +28,7 @@ const Footer = () => {
                     <p className="pb-2 text-info fw-bold">Contact Info</p>
                     <p><i className="fas fa-phone text-primary"></i> +123-1234-6780</p>
                     <p><i className="fab fa-whatsapp-square text-primary"></i> +333-7889-578</p>
-                    <p><i className="fas fa-at text-primary"></i> medicare@gmail.com</p>
+                    <p><i className="fas fa-at text-primary"></i> m.care@gmail.com</p>
                     <p><i className="fab fa-instagram-square text-primary"></i> medicare_789</p>
                     <p><i className="fas fa-map-marker-alt text-primary"></i> Dhaka,Bangladesh</p>
                 </div>

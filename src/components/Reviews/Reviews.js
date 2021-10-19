@@ -13,11 +13,11 @@ const Reviews = () => {
                     <img src={reviewer1} alt="" />
                     <h3 className="p-3">John</h3>
                     <div className="">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half"></i>
+                        <i className="fas fa-star"></i>
+                        <i className="fas fa-star"></i>
+                        <i className="fas fa-star"></i>
+                        <i className="fas fa-star"></i>
+                        <i className="fas fa-star-half"></i>
                     </div>
                     <p className="p-3 lh-lg">
                         MediCare Has Experts for Every Type of diseases, Including Yours. World Class Treatment. Book an Appointment at MediCare. Personalized Treatment. 130+ Years Experience.
@@ -27,11 +27,11 @@ const Reviews = () => {
                     <img src={reviewer2} alt="" />
                     <h3 className="p-3">Julie</h3>
                     <div className="">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half"></i>
+                        <i className="fas fa-star"></i>
+                        <i className="fas fa-star"></i>
+                        <i className="fas fa-star"></i>
+                        <i className="fas fa-star"></i>
+                        <i className="fas fa-star-half"></i>
                     </div>
                     <p className="p-3 lh-lg">
                         MediCare Has Experts for Every Type of diseases, Including Yours. World Class Treatment. Book an Appointment at MediCare. Personalized Treatment. 130+ Years Experience.
@@ -41,11 +41,11 @@ const Reviews = () => {
                     <img src={reviewer3} alt="" />
                     <h3 className="p-3">Jesan</h3>
                     <div className="">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half"></i>
+                        <i className="fas fa-star"></i>
+                        <i className="fas fa-star"></i>
+                        <i className="fas fa-star"></i>
+                        <i className="fas fa-star"></i>
+                        <i className="fas fa-star-half"></i>
                     </div>
                     <p className="p-3 lh-lg">
                         MediCare Has Experts for Every Type of diseases, Including Yours. World Class Treatment. Book an Appointment at MediCare. Personalized Treatment. 130+ Years Experience.
