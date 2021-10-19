@@ -1,14 +1,14 @@
 # Website Name: MediCare
 
-This website is a health care based website from where you can get to know our services, client's reviews,facilities and also you can book appointment online 
+This website is a health care based website from where you can get to know our services, client's reviews,facilities and also you can book appointment online.
 
 Live Website Link: (https://medicare-d32ee.web.app/).
 
 ## Some features and functionalities of our website
 * in home page we have navbar, banner, services and footer
-* if clicked on details under the service it'll take us to the login page
+* if clicked on details under the service it will take us to the login page
 * we have 2 types of authentication system (email/password and google sign in)
-* we can toggle between sign in and sign up
+* we can toggle between login and register
 * also we can book appointment for any consultation
 
 In the project directory, you can run:
