@@ -1,9 +1,9 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import useFirebase from '../../hooks/useFirebase';
+import useAuth from '../../hooks/useAuth';
 import './Header.css'
 const Header = () => {
-    const { user, logOut } = useFirebase();
+    const { user, logOut } = useAuth();
     return (
         <div>
             <nav className="navbar navigation-bar navbar-expand-lg navbar-light px-5">
@@ -31,10 +31,12 @@ const Header = () => {
                                 <NavLink className="nav-link text-primary fs-5 pe-4" to="/appointment">Appointment</NavLink>
                             </li>
                             <li className="nav-item">
+                                {/* <span className="text-warning fw-bold fs-5 pt-5 pe-2">{user.displayName} </span> */}
                                 {
                                     user.email ?
                                         <button className="btn btn-primary mt-1" onClick={logOut}>Log Out</button> :
                                         <NavLink className="nav-link text-primary fs-5 pe-4" to="/login">Login</NavLink>}
+                                <span className="text-warning fw-bold fs-5 mt-2 pt-5 ps-3">{user.displayName} </span>
                             </li>
                         </ul>
                     </div>

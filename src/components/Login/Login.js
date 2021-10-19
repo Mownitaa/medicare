@@ -1,10 +1,20 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import useFirebase from '../../hooks/useFirebase';
+import { Link, useLocation, useHistory } from 'react-router-dom';
+import useAuth from '../../hooks/useAuth';
 
 const Login = () => {
 
-    const { user, signInUsingGoogle } = useFirebase();
+    const { signInUsingGoogle } = useAuth();
+    const location = useLocation();
+    const history = useHistory();
+
+    const redirect_uri = location.state?.from || '/services';
+    const handleGoogleLogin = () => {
+        signInUsingGoogle()
+            .then(result => {
+                history.push(redirect_uri);
+            })
+    }
 
     return (
         <div>
@@ -15,7 +25,7 @@ const Login = () => {
 
                 <div className="container pt-4 pb-5 border border-4 border-warning m-5 w-75">
                     <h1 className="text-primary fw-bold pb-3"><i className="fas fa-user-md"></i></h1>
-                    <form onSubmit="">
+                    <form>
                         <input className="w-50 border border-info p-2" type="email" name="" id="" placeholder="Email" />
                         <br />
                         <br />
@@ -27,7 +37,7 @@ const Login = () => {
 
                     <p className="pt-5">New to MediCare? <Link to="/register">Create Account</Link> </p>
                     <div className="pb-2 fs-5">or,</div>
-                    <button onClick={signInUsingGoogle}
+                    <button onClick={handleGoogleLogin}
                         className="btn btn-info border border-primary fs-6 fw-bold text-white p-3">Google Sign In</button>
                 </div>
             </div>
