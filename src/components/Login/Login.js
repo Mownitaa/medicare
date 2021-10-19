@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Link, useLocation, useHistory } from 'react-router-dom';
+import { useLocation, useHistory } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
-import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
 
 const Login = () => {
     const auth = getAuth();
@@ -28,6 +28,7 @@ const Login = () => {
 
     const handleLogin = (e) => {
         e.preventDefault();
+        console.log(email, password);
         if (password.length < 6) {
             setError('Password must be at least 6 characters long');
             return;
@@ -36,8 +37,11 @@ const Login = () => {
             setError('Password must contain two uppercase letters');
             return;
         }
-        console.log(email, password);
-        createUserWithEmailAndPassword(auth, email, password)
+        isLogin ? processLogin(email, password) : registerNewUser(email, password);
+    }
+
+    const processLogin = (email, password) => {
+        signInWithEmailAndPassword(auth, email, password)
             .then(result => {
                 const user = result.user;
                 console.log(user);
@@ -60,6 +64,20 @@ const Login = () => {
     const handlePassChange = (e) => {
         setPassword(e.target.value);
     }
+
+    const registerNewUser = (email, password) => {
+        createUserWithEmailAndPassword(auth, email, password)
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+                setError('');
+            })
+            .catch(error => {
+                setError(error.message);
+            })
+    }
+
+
     return (
         <div>
             <h3 className="text-info fw-bold pt-4">Please {isLogin ? 'Login' : 'Register'} !!!</h3>
@@ -76,17 +94,16 @@ const Login = () => {
                         <input onBlur={handlePassChange} className="w-50  border border-info p-2" type="password" name="" id="" placeholder="Password" required />
                         <br />
                         <br />
+                        <button type="submit" className="bg-white border rounded border-warning text-primary fw-bold px-3 py-2">{isLogin ? 'Login' : 'Register'}</button>
 
-                        {/* <input className="bg-white border rounded border-warning text-primary fw-bold px-3" type="submit" value="Submit" /> */}
-                        {/* <button className="bg-white border rounded border-warning text-primary fw-bold px-3 py-2">{isLogin ? 'Login' : 'Register'}</button> */}
                         <div className="row mt-3 text-danger d-flex align-items-center justify-content-center text-center">{error}</div>
                     </form>
                     <input onChange={toggleLogin} className="form-check-input" type="checkbox" id="gridCheck1" />
                     <label className="form-check-label ps-2" htmlFor="gridCheck1">Already Registered?</label>
                     <br /> <br />
-                    <button className="bg-white border rounded border-warning text-primary fw-bold px-3 py-2">{isLogin ? 'Login' : 'Register'}</button>
+                    {/* <button type="submit" className="bg-white border rounded border-warning text-primary fw-bold px-3 py-2">{isLogin ? 'Login' : 'Register'}</button> */}
 
-                    {/* <p className="pt-5">New to MediCare? <Link to="/register">Create Account</Link> </p> */}
+
                     <div className="pb-2 fs-5">or,</div>
                     <button onClick={handleGoogleLogin}
                         className="btn btn-info border border-primary fs-6 fw-bold text-white p-3">Google Sign In</button>
