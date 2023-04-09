@@ -5,9 +5,9 @@ This website is a health care based website from where you can get to know our s
 Live Website Link: (https://medicare-d32ee.web.app/).
 
 ## Some features and functionalities of my project
-‣Developed React.js project for implementing firebase authentication system
-‣Implemented Google sign in method and created private route
-‣Fetched data from API to view specific service
+* Developed React.js project for implementing firebase authentication system
+* Implemented Google sign in method and created private route
+* Fetched data from API to view specific service
 
 In the project directory, you can run:
 
